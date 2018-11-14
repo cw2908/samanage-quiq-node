@@ -1,0 +1,43 @@
+{
+  "engines": {
+    "node": ">=8.0.0 <=11.1.0",
+    "yarn": "^1.9.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "mocha --recursive",
+    "watch": "mocha --watch --recursive"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "eslint": "^5.9.0",
+    "express": "^4.16.4",
+    "express-async-handler": "^1.1.4",
+    "samanage-api": "^2.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-match": "^1.1.1",
+    "concurrently": "^4.0.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.6",
+    "regenerator-runtime": "^0.12.1",
+    "supertest": "^3.3.0"
+  },
+  "name": "scriptmanage-utampa-node",
+  "version": "1.0.0",
+  "description": "Samanage Quiq listner",
+  "main": "server.js",
+  "repository": "https://github.com/cw2908/samanage-quiq",
+  "author": "Chris Walls <cwalls2908@gmail.com>",
+  "license": "MIT"
+}
