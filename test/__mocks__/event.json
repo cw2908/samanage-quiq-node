@@ -1,0 +1,142 @@
+{
+  "data": {
+    "messages": [{
+      "proxyInteraction": null,
+      "author": "tid.1542234989762.92f75cd5644fb79a27",
+      "assets": [],
+      "timestamp": 1542309928544,
+      "sourcePlatform": "Chat",
+      "messageResult": {
+        "errorCode": null,
+        "status": "Success"
+      },
+      "text": "Samanage Test",
+      "fromCustomer": true,
+      "adaptiveTime": 600047,
+      "platformData": null,
+      "links": [],
+      "id": "mid.1542309928544.e4d6f10c609f685689",
+      "times": null,
+      "postbackData": null,
+      "quiqReply": null,
+      "transcriptHints": null
+    }, {
+      "proxyInteraction": null,
+      "author": "chris.walls@samanage.com",
+      "assets": [],
+      "timestamp": 1542309939974,
+      "sourcePlatform": "Quiq",
+      "messageResult": {
+        "errorCode": null,
+        "status": "Success"
+      },
+      "text": "Waiting for conversationClosed",
+      "fromCustomer": false,
+      "adaptiveTime": null,
+      "platformData": null,
+      "links": [],
+      "id": "mid.1542309940000.ef09eb5f9ba599e702",
+      "times": null,
+      "postbackData": null,
+      "quiqReply": null,
+      "transcriptHints": null
+    }],
+    "startedBy": {
+      "id": null,
+      "type": "customer"
+    },
+    "integrationsData": {},
+    "collaboration": null,
+    "startTime": 1542309928544,
+    "custom": null,
+    "queue": "it-security",
+    "appleMessages": null,
+    "lastNotification": null,
+    "endpointId": "it-security",
+    "integrations": [],
+    "endTime": 1542309942512,
+    "timers": {
+      "invitationTimer": null,
+      "responseTimer": null
+    },
+    "id": "cid.1542309928654.8e9d4971fa828bc41d",
+    "customerHandle": "tid.1542234989762.92f75cd5644fb79a27",
+    "customerPlatform": "Chat",
+    "status": "closed",
+    "customer": {
+      "custom": null,
+      "phoneNumber": "+19199315076",
+      "email": null,
+      "lastName": "Walls",
+      "firstName": "Chris"
+    },
+    "webData": {
+      "browserCaps": {
+        "deviceType": "Desktop"
+      },
+      "ip": "64.128.43.74",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
+    },
+    "members": {},
+    "metrics": {
+      "numberOfCustomerMessages": 1,
+      "numberOfResponseTimerExpirations": 0,
+      "numberOfSystemMessages": 0,
+      "initialAgentResponseDurationSinceAssignment": 8432,
+      "initialAgentResponseDuration": 11383,
+      "averageAgentMessageDuration": 11430,
+      "numberOfAcceptedTransfers": 0,
+      "averageResponseTime": 11430,
+      "numberOfAgentMessages": 1,
+      "workTime": 8432,
+      "timeToFirstResponse": 11383,
+      "numberOfRequeues": 0,
+      "averageCustomerMessageDuration": null
+    },
+    "owner": "chris.walls@samanage.com",
+    "contactPointId": "it-security",
+    "events": [{
+      "type": "requested",
+      "timestamp": 1542309928591,
+      "triggeredBy": {
+        "id": null,
+        "type": "system"
+      }
+    }, {
+      "newQueue": "it-security",
+      "timestamp": 1542309929020,
+      "oldQueue": null,
+      "triggeredBy": {
+        "id": null,
+        "type": "system"
+      },
+      "type": "queueChanged"
+    }, {
+      "newOwner": "chris.walls@samanage.com",
+      "timestamp": 1542309931542,
+      "oldOwner": null,
+      "triggeredBy": {
+        "id": "chris.walls@samanage.com",
+        "type": "user"
+      },
+      "type": "ownerChanged"
+    }, {
+      "type": "activated",
+      "timestamp": 1542309939974,
+      "triggeredBy": {
+        "id": "chris.walls@samanage.com",
+        "type": "user"
+      }
+    }, {
+      "type": "closed",
+      "timestamp": 1542309942512,
+      "triggeredBy": {
+        "id": "chris.walls@samanage.com",
+        "type": "user"
+      }
+    }]
+  },
+  "eventType": "ConversationClosed",
+  "id": "e870b6f3-b903-4208-b100-58af4d3f5788",
+  "timestamp": 1542309942535
+}

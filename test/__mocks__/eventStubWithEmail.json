@@ -1,0 +1,144 @@
+{
+  "data": {
+    "messages": [{
+      "proxyInteraction": null,
+      "author": "tid.1543600212625.5387917aeae11abe9e",
+      "assets": [],
+      "timestamp": 1543600223606,
+      "sourcePlatform": "Chat",
+      "messageResult": {
+        "errorCode": null,
+        "status": "Success"
+      },
+      "text": "Hi I need help",
+      "fromCustomer": true,
+      "adaptiveTime": 600032,
+      "platformData": null,
+      "links": [],
+      "id": "mid.1543600223606.8cf467e4df47c93684",
+      "times": null,
+      "postbackData": null,
+      "quiqReply": null,
+      "transcriptHints": null
+    }, {
+      "proxyInteraction": null,
+      "author": "chris.walls@samanage.com",
+      "assets": [],
+      "timestamp": 1543600289597,
+      "sourcePlatform": "Quiq",
+      "messageResult": {
+        "errorCode": null,
+        "status": "Success"
+      },
+      "text": "Glad to help",
+      "fromCustomer": false,
+      "adaptiveTime": null,
+      "platformData": null,
+      "links": [],
+      "id": "mid.1543600289622.f48294bc8cd5e2e8a1",
+      "times": null,
+      "postbackData": null,
+      "quiqReply": null,
+      "transcriptHints": null
+    }],
+    "startedBy": {
+      "id": null,
+      "type": "customer"
+    },
+    "integrationsData": {},
+    "collaboration": null,
+    "startTime": 1543600223606,
+    "custom": null,
+    "queue": "it-security",
+    "appleMessages": null,
+    "lastNotification": null,
+    "endpointId": "it-security",
+    "integrations": [],
+    "endTime": 1543600292014,
+    "timers": {
+      "invitationTimer": null,
+      "responseTimer": null
+    },
+    "id": "cid.1543600223640.b7bdd8822933e8751b",
+    "customerHandle": "tid.1543600212625.5387917aeae11abe9e",
+    "customerPlatform": "Chat",
+    "status": "closed",
+    "customer": {
+      "custom": null,
+      "phoneNumber": null,
+      "email": "chris.walls+apitest@samanage.com",
+      "lastName": null,
+      "firstName": null
+    },
+    "webData": {
+      "ip": "64.128.43.74",
+      "browserCaps": {
+        "deviceType": "Desktop"
+      },
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
+      "referrer": "https://utampa.goquiq.com/app/chat-demo/it-security",
+      "timeZone": "America/New_York"
+    },
+    "members": {},
+    "metrics": {
+      "numberOfCustomerMessages": 1,
+      "numberOfResponseTimerExpirations": 0,
+      "numberOfSystemMessages": 0,
+      "initialAgentResponseDurationSinceAssignment": 60606,
+      "initialAgentResponseDuration": 65959,
+      "averageAgentMessageDuration": 65991,
+      "numberOfAcceptedTransfers": 0,
+      "averageResponseTime": 65991,
+      "numberOfAgentMessages": 1,
+      "workTime": 60606,
+      "timeToFirstResponse": 65959,
+      "numberOfRequeues": 0,
+      "averageCustomerMessageDuration": null
+    },
+    "owner": "chris.walls@samanage.com",
+    "contactPointId": "it-security",
+    "events": [{
+      "type": "requested",
+      "timestamp": 1543600219666,
+      "triggeredBy": {
+        "id": null,
+        "type": "system"
+      }
+    }, {
+      "newQueue": "it-security",
+      "timestamp": 1543600223858,
+      "oldQueue": null,
+      "triggeredBy": {
+        "id": null,
+        "type": "system"
+      },
+      "type": "queueChanged"
+    }, {
+      "newOwner": "chris.walls@samanage.com",
+      "timestamp": 1543600228991,
+      "oldOwner": null,
+      "triggeredBy": {
+        "id": "chris.walls@samanage.com",
+        "type": "user"
+      },
+      "type": "ownerChanged"
+    }, {
+      "type": "activated",
+      "timestamp": 1543600289597,
+      "triggeredBy": {
+        "id": "chris.walls@samanage.com",
+        "type": "user"
+      }
+    }, {
+      "type": "closed",
+      "timestamp": 1543600292014,
+      "triggeredBy": {
+        "id": "chris.walls@samanage.com",
+        "type": "user"
+      }
+    }]
+  },
+  "eventType": "ConversationClosed",
+  "id": "1681e31d-8e02-4821-a111-e4eb4889cc7b",
+  "timestamp": 1543600292028
+}
