@@ -22,7 +22,7 @@
       "transcriptHints": null
     }, {
       "proxyInteraction": null,
-      "author": "chris.walls@samanage.com",
+      "author": "chris.walls+apitest@samanage.com",
       "assets": [],
       "timestamp": 1542309939974,
       "sourcePlatform": "Quiq",
@@ -93,7 +93,7 @@
       "numberOfRequeues": 0,
       "averageCustomerMessageDuration": null
     },
-    "owner": "chris.walls@samanage.com",
+    "owner": "chris.walls+apitest@samanage.com",
     "contactPointId": "it-security",
     "events": [{
       "type": "requested",
@@ -112,11 +112,11 @@
       },
       "type": "queueChanged"
     }, {
-      "newOwner": "chris.walls@samanage.com",
+      "newOwner": "chris.walls+apitest@samanage.com",
       "timestamp": 1542309931542,
       "oldOwner": null,
       "triggeredBy": {
-        "id": "chris.walls@samanage.com",
+        "id": "chris.walls+apitest@samanage.com",
         "type": "user"
       },
       "type": "ownerChanged"
@@ -124,14 +124,14 @@
       "type": "activated",
       "timestamp": 1542309939974,
       "triggeredBy": {
-        "id": "chris.walls@samanage.com",
+        "id": "chris.walls+apitest@samanage.com",
         "type": "user"
       }
     }, {
       "type": "closed",
       "timestamp": 1542309942512,
       "triggeredBy": {
-        "id": "chris.walls@samanage.com",
+        "id": "chris.walls+apitest@samanage.com",
         "type": "user"
       }
     }]

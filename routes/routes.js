@@ -15,7 +15,7 @@ const handleQuiqEvent = (quiqEvent) => {
     const request = SamanageAPI.create("incident")(incident)
     console.log({incident})
     console.log({request})
-    return connection.callSamanageApi(request)
+    connection.callSamanageAPI(request)
       .then(res => {
         console.log({res})
         return {message: "Success", status: 200}

@@ -9,14 +9,18 @@ const mockNoEmailReq = require("../__mocks__/eventStubNoReqEmail.json") // stubb
 describe("Route Handler", () => {
   describe("/api/samanage route", () => {
     it("returns success given an event with requester email", async () => {
-      return request(app)
+      const response = await request(app)
         .post("/api/samanage")
         .send(mockReq)
         .set("Accept","application/json")
-        .expect(200)
-        .then(res =>  {
-          expect(res.text).to.match(/Success/)
-        })
+        // .expect(200)
+        // .then(res =>  {
+        //   console.log({res})
+        //   expect(res.text).to.match(/Success/)
+        // })
+        console.log({responseKeys: Object.keys(response)})
+        // console.log({responseStatus: response.status})
+        // console.log({responseError: response.error})
     })
     it("returns success given an event with requester email", async () => {
       return request(app)
