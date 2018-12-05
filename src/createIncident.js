@@ -11,7 +11,7 @@ const quiqToIncident = (body) => {
   const requester = eventData && eventData.customer && eventData.customer.email 
   const messages = eventData && eventData.messages && eventData.messages
   const name = messages && messages[0] && eventData.messages[0].text
-  const description = messages.map(message => `${message.text}\n`)
+  const description = messages.map(message => `${message.text}`).join("\n")
   return {
     name,
     description,
@@ -19,14 +19,27 @@ const quiqToIncident = (body) => {
     requester: {email: requester}
   }
 }
-const createIncident = (body) => {
-  const incident = quiqToIncident(body)
+const createIncident = async (incident) => {
   const request = SamanageAPI.create("incident")(incident)
-  // console.log({request})
-  return connection.callSamanageApi(request)
+  return await connection.callSamanageAPI(request)
+}
+const validateIncident = (quiqEvent) => {
+  const eventType = quiqEvent && quiqEvent.eventType
+  const conversationClosed = eventType === "ConversationClosed"
+  const requesterEmail = quiqEvent && quiqEvent.data && quiqEvent.data.customer && quiqEvent.data.customer.email
+  const ownerEmail = quiqEvent && quiqEvent.data && quiqEvent.data.owner
+  const validated = conversationClosed && requesterEmail && ownerEmail
+  const validation = {
+    validated,
+    requesterEmail,
+    conversationClosed,
+    ownerEmail
+  }
+  return validation
 }
 
 module.exports = {
   createIncident,
-  quiqToIncident
+  quiqToIncident,
+  validateIncident
 }
