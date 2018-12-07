@@ -26,7 +26,7 @@ const samanage = async (req, res) => {
   }
   res
     .status(customResponse.status)
-    .end(quiqEvent.message)
+    .end(customResponse.message)
 }
 
 console.log({asyncRoute})
