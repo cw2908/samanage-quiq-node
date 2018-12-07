@@ -5,9 +5,10 @@ const connection = new SamanageAPI.Connection(process.env.SAMANAGE_API_TOKEN)
 // body should be received as https://developers.goquiq.com/api/docs#operation/Webhook%20-%20ConversationStatusChanged
 const quiqToIncident = (body) => {
   const eventData = body.data
-  const assignee = process.env.NODE_ENV === "development"
-    ? process.env.TEST_ASSIGNEE || eventData && eventData.owner
-    : eventData && eventData.owner
+  // const assignee = process.env.NODE_ENV === "development"
+  //   ? process.env.TEST_ASSIGNEE || eventData && eventData.owner
+  //   : eventData && eventData.owner
+  const assignee = eventData && eventData.owner
   const requester = eventData && eventData.customer && eventData.customer.email 
   const messages = eventData && eventData.messages && eventData.messages
   const name = messages && messages[0] && eventData.messages[0].text
