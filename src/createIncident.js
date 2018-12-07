@@ -30,7 +30,7 @@ const validateIncident = (quiqEvent) => {
   const ownerEmail = quiqEvent && quiqEvent.data && quiqEvent.data.owner
   const validated = conversationClosed && requesterEmail && ownerEmail
   const validation = {
-    validated,
+    validated: !!validated,
     requesterEmail,
     conversationClosed,
     ownerEmail

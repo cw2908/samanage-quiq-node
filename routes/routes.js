@@ -1,5 +1,4 @@
 const asyncRoute = require("./asyncRoute.js")
-
 const {validateIncident, createIncident, quiqToIncident } = require("../src/createIncident")
 
 
@@ -14,26 +13,25 @@ const samanage = async (req, res) => {
   if(validation.validated){
     const incident = quiqToIncident(req.body)
     const response = await createIncident(incident)
-    console.log({response},{responseKeys: Object.keys(response)})
-    if (response.status === 200) {
+    const responseHasIncidentId = response && response.data && response.data.id
+  
+    if (responseHasIncidentId) {
       customResponse = {message: "Success", status: 200}
     } else {
       customResponse = {message: `Failed to create incident:  ${incident}`, status: 400}
     }
     // Otherwise return reason for invalid
-    validation.requesterEmail ? null : errorMessage += "No Email Found\n"
-    validation.conversationClosed ? null : errorMessage += `Event type not found received: ${JSON.stringify(quiqEvent)}\n`
+  } else {
+    validation.requesterEmail ? null : errorMessage += "No Email Found. \n"
+    validation.conversationClosed ? null : errorMessage += `Event type not found received: ${JSON.stringify(req.body)}\n`
     customResponse = {message: errorMessage, status: 400}
   }
-  console.log({customResponse})
+
   res
     .status(customResponse.status)
     .end(customResponse.message)
 }
 
-console.log({asyncRoute})
-console.log({samanage})
-console.log({sR: asyncRoute(samanage)})
 module.exports = {
   samanage: asyncRoute(samanage)
 }
