@@ -8,7 +8,7 @@ const samanage = async (req, res) => {
   let errorMessage = ""
   let customResponse = {}
   const validation = validateIncident(req.body)
-  console.log({validated})
+  console.log({validation})
   // If validated created incident and setup response
   if(validation.validated){
     const incident = quiqToIncident(req.body)
