@@ -5,7 +5,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development nodemon server.js",
-    "start": "NODE_ENV=production node server.js",
+    "start": "node server.js",
     "test": "NODE_ENV=test mocha --recursive",
     "watch": "NODE_ENV=test mocha --watch --recursive"
   },
