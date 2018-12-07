@@ -8,7 +8,7 @@ const quiqToIncident = (body) => {
   const assignee = process.env.NODE_ENV === "development"
     ? process.env.TEST_ASSIGNEE || eventData && eventData.owner
     : eventData && eventData.owner
-  const assignee = eventData && eventData.owner
+  // const assignee = eventData && eventData.owner
   const requester = eventData && eventData.customer && eventData.customer.email 
   const messages = eventData && eventData.messages && eventData.messages
   const name = messages && messages[0] && eventData.messages[0].text
