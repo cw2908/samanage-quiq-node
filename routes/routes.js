@@ -14,6 +14,7 @@ const samanage = async (req, res) => {
   if(validation.validated){
     const incident = quiqToIncident(req.body)
     const response = await createIncident(incident)
+    console.log({response},{responseKeys: Object.keys(response)})
     if (response.status === 200) {
       customResponse = {message: "Success", status: 200}
     } else {
@@ -24,6 +25,7 @@ const samanage = async (req, res) => {
     validation.conversationClosed ? null : errorMessage += `Event type not found received: ${JSON.stringify(quiqEvent)}\n`
     customResponse = {message: errorMessage, status: 400}
   }
+  console.log({customResponse})
   res
     .status(customResponse.status)
     .end(customResponse.message)
