@@ -29,7 +29,7 @@ const samanage = async (req, res) => {
       customResponse = {message: errorMessage, status: 400}
     }
   } catch(err) {
-    customResponse = {message: `Error: ${err}`, status: 500}
+    customResponse = {message: `Error: ${$JSON.stringify(err)}`, status: 500}
   }
   console.log({customResponse})
   res
