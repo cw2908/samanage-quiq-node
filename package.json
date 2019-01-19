@@ -35,7 +35,7 @@
     "sinon": "^7.1.1",
     "supertest": "^3.3.0"
   },
-  "name": "scriptmanage-utampa-node",
+  "name": "scriptmanage-quiq-node",
   "version": "1.0.0",
   "description": "Samanage Quiq listner",
   "main": "server.js",
