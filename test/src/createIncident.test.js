@@ -14,10 +14,11 @@ describe("quiqToIncidentFunction", () => {
   it("should receive matching assigneeEmail, requesterEmail && description", () => {
     const expectedIncident = {
       name: "Hi I need help",
-      description: "Hi I need help\nGlad to help",
+      description: "Hi I need help\nchris.walls+apitest@samanage.com: Glad to help",
       assignee: {email: "chris.walls+apitest@samanage.com"},
       requester: {email: "chris.walls+apitest@samanage.com"}
     }
+    console.log({convertedIncident}, {expectedIncident})
     expect(compare(convertedIncident, expectedIncident)).to.eq(true)
   }  )
   it("should create an incident and receive an ID", async () => {
