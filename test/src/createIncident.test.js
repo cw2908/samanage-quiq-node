@@ -1,36 +1,32 @@
 const expect = require("chai").expect
-const {createIncident, quiqToIncident} = require("../../src/createIncident")
+const {createIncident, quiqToIncident, validateIncident} = require("../../src/createIncident")
 const mockData = require("../__mocks__/eventStubWithEmail")
-const BadMockData = require("../__mocks__/eventStubNoReqEmail")
+// const badMockData = require("../__mocks__/eventStubNoReqEmail")
 
-// Compare if two objects are the same
-const compare = (a, b) =>  JSON.stringify(a) === JSON.stringify(b)
+// Compare if two json objects are the same
+const compare = (a, b) =>  JSON.stringify(a) === JSON.stringify(b) && typeof a === "object"
+
 
 
 
 describe("quiqToIncidentFunction", () => {
-  it("should receive assigneeEmail, requesterEmail && description", () => {
-    const convertedIncident = quiqToIncident(mockData)
+  const convertedIncident = quiqToIncident(mockData)
+  it("should receive matching assigneeEmail, requesterEmail && description", () => {
     const expectedIncident = {
-      incident: {
-        name: "Test",
-        description: "Description",
-        assignee: {email: "chris.walls@samanage.com"},
-        requester: {email: "chris.walls+apitest@samanage.com"}
-      }
+      name: "Hi I need help",
+      description: "Hi I need help\nGlad to help",
+      assignee: {email: "chris.walls+apitest@samanage.com"},
+      requester: {email: "chris.walls+apitest@samanage.com"}
     }
     expect(compare(convertedIncident, expectedIncident)).to.eq(true)
+  }  )
+  it("should create an incident and receive an ID", async () => {
+    const samanageIncident = await createIncident(convertedIncident)
+    const incidentId = samanageIncident && samanageIncident.data && samanageIncident.data.id
+    expect(incidentId).to.be.a("number")
   })
-  it("should receive assigneeEmail, requesterEmail && description", () => {
-    const convertedIncident = quiqToIncident(BadMockData)
-    const expectedIncident = {
-      incident: {
-        name: "Test",
-        description: "Description",
-        assignee: {email: "chris.walls@samanage.com"},
-        requester: {email: "chris.walls+apitest@samanage.com"}
-      }
-    }
-    expect(compare(convertedIncident, expectedIncident)).to.eq(false)
+  it("validates an incident has a requester, email, and closedConversation type", () => {
+    const validation =  validateIncident(mockData)
+    expect(validation.validated).to.be.ok
   })
 })

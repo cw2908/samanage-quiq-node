@@ -9,7 +9,7 @@ const bodyParser = require("body-parser")
 const app = express()
 const Routes = require("./routes/routes.js")
 const quiqErrorHandler   = require("./src/quiqErrorHandler")
-const port = process.env.SAMANAGE_QUIQ_PORT || 5001
+const port = process.env.PORT || 5001
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(quiqErrorHandler) // import your own error handler here
@@ -21,6 +21,5 @@ app.post("/api/samanage", Routes.samanage)
 if(!module.parent){  
   app.listen(port, () => console.log(`Listening on port ${port}`)) // eslint-disable-line
 }
-
 // Export for use in tests
 module.exports = app
