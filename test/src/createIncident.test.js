@@ -18,7 +18,6 @@ describe("quiqToIncidentFunction", () => {
       assignee: {email: "chris.walls+apitest@samanage.com"},
       requester: {email: "chris.walls+apitest@samanage.com"}
     }
-    console.log({convertedIncident}, {expectedIncident})
     expect(compare(convertedIncident, expectedIncident)).to.eq(true)
   }  )
   it("should create an incident and receive an ID", async () => {

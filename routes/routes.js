@@ -8,15 +8,12 @@ const samanage = async (req, res) => {
   let errorMessage = ""
   let customResponse = {}
   const validation = validateIncident(req.body)
-  console.log({validation})
   // If validated created incident and setup response
   try {
     if(validation.validated){
       const incident = quiqToIncident(req.body)
-      console.log({incident})
       const response = await createIncident(incident)
       const responseHasIncidentId = response && response.data && response.data.id
-      console.log({responseHasIncidentId})
       if (responseHasIncidentId) {
         customResponse = {message: "Success", status: 200}
       } else {
@@ -31,7 +28,6 @@ const samanage = async (req, res) => {
   } catch(err) {
     customResponse = {message: `Error: ${JSON.stringify(err)}`, status: 400}
   }
-  console.log({customResponse})
   res
     .status(customResponse.status)
     .end(customResponse.message)
