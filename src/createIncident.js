@@ -17,6 +17,7 @@ const quiqToIncident = (body) => {
     console.log({message})
     let authorString
     authorString = new String(message.author).includes("@") ? `${message.author}: ` : ""
+    authorString === "" && message.fromCustomer ? authorString = requester : ""
     return `${authorString}${message.text}`
   }).join("\n")
   return {
