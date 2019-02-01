@@ -12,9 +12,7 @@ const quiqToIncident = (body) => {
   const requester = eventData && eventData.customer && eventData.customer.email 
   const messages = eventData && eventData.messages && eventData.messages
   const name = messages && messages[0] && eventData.messages[0].text
-  console.log({messages})
   const description = messages.map(message => {
-    console.log({message})
     let authorString
     authorString = new String(message.author).includes("@") ? `${message.author}: ` : ""
     if (authorString === "" && message.fromCustomer) {
