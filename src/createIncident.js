@@ -20,8 +20,8 @@ const quiqToIncident = (body) => {
     if (authorString === "" && message.fromCustomer) {
       authorString = `${requester}`
     }
-    return `${authorString}${message.text}`
-  }).join("\n")
+    return `${authorString}: ${message.text}`
+  }).join("\n\n")
   return {
     name,
     description,
